@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F16FB18E1D74825000674D57 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F16FB18D1D74825000674D57 /* main.cpp */; };
+		F16FB1A81D74A17C00674D57 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F16FB1A01D74840900674D57 /* main.cpp */; };
+		F16FB1A91D74A17F00674D57 /* robo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F16FB1A11D74840900674D57 /* robo.cpp */; };
+		F16FB1AA1D74A18C00674D57 /* findpath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F16FB19E1D74840900674D57 /* findpath.cpp */; };
+		F16FB1AE1D74C18B00674D57 /* globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F16FB1AD1D74C18B00674D57 /* globals.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +27,15 @@
 
 /* Begin PBXFileReference section */
 		F16FB18A1D74825000674D57 /* vacumCleaner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vacumCleaner; sourceTree = BUILT_PRODUCTS_DIR; };
-		F16FB18D1D74825000674D57 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F16FB19E1D74840900674D57 /* findpath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findpath.cpp; sourceTree = "<group>"; };
+		F16FB19F1D74840900674D57 /* fsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fsa.h; sourceTree = "<group>"; };
+		F16FB1A01D74840900674D57 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; wrapsLines = 1; };
+		F16FB1A11D74840900674D57 /* robo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = robo.cpp; sourceTree = "<group>"; };
+		F16FB1A21D74840900674D57 /* robo.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = robo.hpp; sourceTree = "<group>"; };
+		F16FB1A31D74840900674D57 /* stlastar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stlastar.h; sourceTree = "<group>"; };
+		F16FB1A71D74845800674D57 /* findpath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = findpath.hpp; sourceTree = "<group>"; };
+		F16FB1AD1D74C18B00674D57 /* globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = globals.cpp; sourceTree = "<group>"; };
+		F1FAE0421D7717E400BBDA90 /* globals.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = globals.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +68,15 @@
 		F16FB18C1D74825000674D57 /* vacumCleaner */ = {
 			isa = PBXGroup;
 			children = (
-				F16FB18D1D74825000674D57 /* main.cpp */,
+				F16FB1AD1D74C18B00674D57 /* globals.cpp */,
+				F1FAE0421D7717E400BBDA90 /* globals.hpp */,
+				F16FB19E1D74840900674D57 /* findpath.cpp */,
+				F16FB1A71D74845800674D57 /* findpath.hpp */,
+				F16FB19F1D74840900674D57 /* fsa.h */,
+				F16FB1A01D74840900674D57 /* main.cpp */,
+				F16FB1A11D74840900674D57 /* robo.cpp */,
+				F16FB1A21D74840900674D57 /* robo.hpp */,
+				F16FB1A31D74840900674D57 /* stlastar.h */,
 			);
 			path = vacumCleaner;
 			sourceTree = "<group>";
@@ -118,7 +137,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F16FB18E1D74825000674D57 /* main.cpp in Sources */,
+				F16FB1AE1D74C18B00674D57 /* globals.cpp in Sources */,
+				F16FB1AA1D74A18C00674D57 /* findpath.cpp in Sources */,
+				F16FB1A81D74A17C00674D57 /* main.cpp in Sources */,
+				F16FB1A91D74A17F00674D57 /* robo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +231,8 @@
 		F16FB1921D74825000674D57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +240,8 @@
 		F16FB1931D74825000674D57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -239,6 +265,7 @@
 				F16FB1931D74825000674D57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

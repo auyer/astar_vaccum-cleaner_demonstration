@@ -1,15 +1,26 @@
 //
 //  main.cpp
-//  vacumCleaner
+//  aspiradorPo
 //
-//  Created by Rafael Auyer on 29/08/16.
+//  Created by Rafael Auyer on 22/08/16.
 //  Copyright © 2016 Rafael Auyer. All rights reserved.
 //
 
 #include <iostream>
+#include "robo.hpp"
+#include <unistd.h>
+
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+    robo aspirator;
+    
+    while(true){
+        cycle(aspirator);
+        usleep(500000);
+    }
+
+
     return 0;
 }
